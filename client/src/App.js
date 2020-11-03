@@ -14,6 +14,7 @@ import { checkUserSession } from './redux/user/user.actions';
 
 const HomePage = lazy(() => import('./pages/homepage/homepage'));
 const ShopPage = lazy(() => import('./pages/shop/shop'));
+const ContactPage = lazy(() => import('./pages/contact/contact'));
 const SignInAndSignUpPage = lazy(() => import ('./pages/sign-in-and-sign-up/sign-in-and-sign-up'));
 const CheckoutPage = lazy(() => import ('./pages/checkout/checkout'));
 
@@ -31,6 +32,7 @@ const App = ({ checkUserSession, currentUser }) => {
           <Suspense fallback={<Spinner />}>
             <Route exact path='/' component={HomePage} />
             <Route path='/shop' component={ShopPage} />
+            <Route path='/contact' component={ContactPage} />
             <Route exact path='/checkout' component={CheckoutPage} />
             <Route
               exact
@@ -45,7 +47,6 @@ const App = ({ checkUserSession, currentUser }) => {
     </div>
   );
 }
-
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser
