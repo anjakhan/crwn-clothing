@@ -22,7 +22,7 @@ export const Icon = styled.i`
     background-color: #323338;
     border-radius: 50%;
     padding: 15px 18px;
-    margin: 20px;
+    margin: 15px;
     font-size: 30px;
     transition: 0.5s;
     
